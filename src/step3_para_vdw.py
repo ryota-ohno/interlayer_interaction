@@ -19,7 +19,7 @@ def get_c_vec_vdw(monomer_name,R3,R4,a_,b_,theta):#,name_csv
     Rb_list=[np.round(Rb,1) for Rb in np.linspace(-np.round(b_/2,1),np.round(b_/2,1),int(np.round(2*np.round(b_/2,1)/0.1))+1)]
     Ra_list=[np.round(Ra,1) for Ra in np.linspace(-np.round(a_/2,1),np.round(a_/2,1),int(np.round(2*np.round(a_/2,1)/0.1))+1)]
     z_list=[];V_list=[];z_2dlist=[]
-    for Ra in Ra_list:
+    for Ra in tqdm(Ra_list):
         z_maxlist=[]
         for Rb in Rb_list:
             z_max1=0
